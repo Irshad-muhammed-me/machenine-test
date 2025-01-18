@@ -16,50 +16,53 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border: 5px solid blueviolet;
+  padding-bottom: 4rem;
+  height: fit-content !important;
 }
 
 header {
-  width: 100%;
-  height: 70px;
+  /* width: 100%;
+  height: 70px; */
   /* background-color: white; */
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   border: 1px solid white;
-  background-color: black;
+  background-color: black; */
 }
-header .logo {
+/* header .logo {
   width: 20%;
   margin-left: 70px;
   cursor: pointer;
-}
+} */
 
 header .search-icon {
-  width: 9%;
+  /* width: 9%;
   z-index: 2;
   position: relative;
   top: 13px;
-  left: 50px;
+  left: 50px; */
 }
 
 header input {
-  padding: 13px 50px 10px 120px;
+  /* padding: 13px 50px 10px 120px; */
   /* padding-right: 100px; */
-  margin-top: 16px;
+  /* margin-top: 16px;
   z-index: 1;
   border: 2px solid white;
-  border-radius: 5px;
+  border-radius: 5px; */
 }
 header .person {
-  padding: 15px;
-  cursor: pointer;
+  /* padding: 15px;
+  cursor: pointer; */
 }
 header .notifi {
-  padding: 15px;
+  /* padding: 15px;
   margin-right: 100px;
-  cursor: pointer;
+  cursor: pointer; */
 }
 .row {
-  display: flex;
+  /* display: flex;
   background-image: linear-gradient(
       to bottom,
       rgba(22, 21, 86, 0.9),
@@ -70,18 +73,10 @@ header .notifi {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 89vh;
+  height: 89vh; */
 }
-.row .side {
-  display: 30%;
-  /* background-color: beige; */
-  border: 1px solid white;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-.row .side a {
+
+/* .row .side a {
   text-decoration: none;
   color: white;
   padding: 1.3vh 100px;
@@ -91,40 +86,57 @@ header .notifi {
 .row .side a:hover {
   background-color: white;
   color: black;
-}
-.row .side img {
+} */
+/* .row .side img {
   width: 10%;
   z-index: 2;
   position: relative;
   top: 33px;
   left: 10px;
-}
+} */
 
 .row .main {
-  display: 70%;
+  /* display: 70%;
   display: grid;
   grid-template-columns: repeat(2, 30vw);
   grid-template-rows: 200px 200px;
   column-gap: 15px;
   row-gap: 60px;
   padding-top: 5px;
-  padding-left: 70px;
+  padding-left: 70px; */
   /* border: 1px solid white; */
+
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 3px solid red;
+  width: 70%;
 }
 
 .main .content {
-  align-items: center;
+  width: 50%;
+  height: fit-content;
+  display: block;
+  flex: 1 1 50%;
+}
+
+
+
+.main .content {
+  /* align-items: center;
   margin: auto;
-  /* background-color: chocolate; */
+
   text-align: center;
   overflow: hidden;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 
   /* border: 1px solid white; */
 }
 .main .content img {
-  width: 60%;
-  height: 165px;
+  /* width: 60%;
+  height: 165px; */
   /* margin-left:  20%; */
 }
 .main .content p {
@@ -140,13 +152,9 @@ header .notifi {
 .main .content:hover {
   border: 2px solid wheat;
 }
-.tabl-container {
-  padding: 20px;
-}
 table {
   border-collapse: collapse;
   width: 100%;
-
 }
 td,
 th {
@@ -164,7 +172,7 @@ tr:nth-child(even) {
 footer {
   width: 100%;
   height: 100px;
-  background-color:black;
+  background-color: black;
   text-align: center;
 }
 footer p {
@@ -172,19 +180,82 @@ footer p {
   padding-top: 5px;
   color: white;
 }
-footer i{
+footer i {
   color: white;
   padding: 10px;
   padding-top: 20px;
   font-size: 30px;
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .row .content {
-    
-   display: grid;
-   grid-template-rows: auto auto auto auto;
-   padding: 10px;
-
-  }
-  .row .content img
+.container {
+  display:  flex;
+  flex-direction: row;
 }
+.side {
+  width: 30%;
+}
+.hamburger {
+  display: none;
+}
+.dropdown-content > a {
+  display: block;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+#hamburger{
+  border: 2px solid red;
+  display: none;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  #hamburger {
+    display: flex;
+  }
+  .main {
+    height: fit-content;
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .content {
+    width: 100%; /* Take full width */
+    flex: 1 1 100%; /* Take up 100% width */
+  }
+  .table-container{
+    overflow-x: scroll;
+  }
+  .container {
+    flex-direction: column;
+    & .side {
+      width: 100%;
+    }
+  }
+  .dropdown-content {
+    display: none;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+.table-container{
+  border: 2px solid rebeccapurple;
+  width: 100%;
+  & table {
+    & td {
+      background-color: red;
+      white-space: nowrap;
+    }
+  }
+}
+figure {
+  border: 4px solid white;
+  & img {
+    display: block;
+    width: 100%;
+    border: 3px solid blue;
+  }
+}
+
+
+      .icon {
+        font-size: 36px; /* Adjust size as needed */
+        color: #007BFF; /* Adjust color as needed */
+      }

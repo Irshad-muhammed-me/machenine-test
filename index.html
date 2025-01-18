@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="stayle.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/5320c54aa7.js"
       crossorigin="anonymous"
@@ -12,7 +16,7 @@
   </head>
   <body>
     <header>
-      <img
+      <!-- <img
         class="logo"
         src="Images/582d5d8d66482d445394daa50cc2baf7.png"
         alt=""
@@ -35,51 +39,88 @@
         class="notifi"
         src="icon/notifications_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
         alt=""
-      />
+      /> -->
+      <span class="material-icons icon">home</span>
+      <span class="material-icons icon">search</span>
+      <span class="material-icons icon">person</span>
+      <span class="material-icons icon">settings</span>
+      <span class="material-icons icon">logout</span>
       <hr />
     </header>
-    <div class="row">
+    <div class="container">
       <div class="side">
-        <img
-          src="icon/home_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-          alt=""
-        />
-        <a href="#">Home</a> <br />
-        <img
-          src="icon/dashboard_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-          alt=""
-        />
-        <a href="#">Dashboard</a> <br />
-        <img
-          src="icon/lab_profile_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-          alt=""
-        />
-        <a href="#">Reports</a> <br />
-        <img
-          src="icon/settings_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-          alt=""
-        />
-        <a href="#">Settings</a> <br />
-        <img
-          src="icon/exit_to_app_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-          alt=""
-        />
-        <a href="#">Logout</a> <br />
+        <div class="dropdown">
+          <div id="hamburger">
+            <span class="material-icons icon">menu</span>
+          </div>
+          <div class="dropdown-content">
+            <a href="#">Dashboard</a>
+            <a href="#">Reports</a>
+            <a href="#">Settings</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+
+        <style></style>
       </div>
       <div class="main">
         <div class="content">
-          <img
-            src="Images/beautiful-anime-portrait-new-year-s-eve_23-2151038009.avif"
-            alt=""
-          />
-          <h1>Dashboard</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            rerum sunt voluptatum laboriosam cupiditate et dicta labore. Saepe,
-            inventore minus.
-          </p>
+          <figure>
+            <img
+              src="Images/beautiful-anime-portrait-new-year-s-eve_23-2151038009.avif"
+              alt=""
+            />
+            <figcaption>
+              <h1>Dashboard</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                rerum sunt voluptatum laboriosam cupiditate et dicta labore.
+                Saepe, inventore minus.
+              </p>
+            </figcaption>
+          </figure>
         </div>
-        <div class="content" style="height: 249px">
+        <div class="content">
+          <figure>
+            <img src="Images/31d815e09856e6f865f47398f0f1d748.jpg" alt="" />
+            <figcaption>
+              <h1>Reports</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                rerum sunt voluptatum laboriosam cupiditate et dicta labore.
+                Saepe, inventore minus.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="content">
+          <figure>
+            <img src="Images/anime-characters-with-green-hair.avif" alt="" />
+            <figcaption>
+              <h1>Settings</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                rerum sunt voluptatum laboriosam cupiditate et dicta labore.
+                Saepe, inventore minus.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="content">
+          <figure>
+            <img src="Images/18-levi-ackerman-1660779038832.jpeg" alt="" />
+            <figcaption>
+              <h1>Logout</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+                rerum sunt voluptatum laboriosam cupiditate et dicta labore.
+                Saepe, inventore minus.
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <!-- <div class="content" style="height: 249px">
           <img src="Images/31d815e09856e6f865f47398f0f1d748.jpg" alt="" />
           <h1>Reports</h1>
           <p>
@@ -104,10 +145,10 @@
             rerum sunt voluptatum laboriosam cupiditate et dicta labore. Saepe,
             inventore minus.
           </p>
-        </div>
-      </div>
+        </div> -->
     </div>
-    <div class="tabl-container">
+
+    <div class="table-container">
       <table>
         <thead>
           <tr>
@@ -158,7 +199,6 @@
       </table>
     </div>
     <footer>
-
       <i class="fa-brands fa-facebook"></i>
       <i class="fa-brands fa-instagram"></i>
       <i class="fa-brands fa-twitter"></i>
